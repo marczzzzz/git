@@ -1,5 +1,6 @@
 #include "builtin.h"
 #include "cache.h"
+#include "backup-log.h"
 #include "config.h"
 #include "color.h"
 #include "parse-options.h"
@@ -594,6 +595,15 @@ static char *default_user_config(void)
 	return strbuf_detach(&buf, NULL);
 }
 
+static void hash_one_path(const char *path, struct object_id *oid)
+{
+	struct stat st;
+
+	if (lstat(path, &st) ||
+	    index_path(NULL, oid, path, &st, HASH_WRITE_OBJECT))
+		oidclr(oid);
+}
+
 int cmd_config(int argc, const char **argv, const char *prefix)
 {
 	int nongit = !startup_info->have_repository;
@@ -736,6 +746,8 @@ int cmd_config(int argc, const char **argv, const char *prefix)
 	}
 	else if (actions == ACTION_EDIT) {
 		char *config_file;
+		int core_backup_log = 0;
+		struct object_id old, new;
 
 		check_argc(argc, 0, 0);
 		if (!given_config_source.file && nongit)
@@ -748,6 +760,9 @@ int cmd_config(int argc, const char **argv, const char *prefix)
 		config_file = given_config_source.file ?
 				xstrdup(given_config_source.file) :
 				git_pathdup("config");
+		repo_config_get_bool(the_repository, "core.backuplog",
+				     &core_backup_log);
+		oidclr(&old);
 		if (use_global_config) {
 			int fd = open(config_file, O_CREAT | O_EXCL | O_WRONLY, 0666);
 			if (fd >= 0) {
@@ -758,9 +773,19 @@ int cmd_config(int argc, const char **argv, const char *prefix)
 			}
 			else if (errno != EEXIST)
 				die_errno(_("cannot create configuration file %s"), config_file);
-		}
+		} else if (!given_config_source.file && core_backup_log)
+			hash_one_path(git_path("config"), &old);
 		launch_editor(config_file, NULL, NULL);
 		free(config_file);
+		if (!is_null_oid(&old)) {
+			struct strbuf sb = STRBUF_INIT;
+
+			hash_one_path(git_path("config"), &new);
+			bkl_append(&sb, "config", &old, &new);
+			mkdir(git_path("common"), 0777);
+			bkl_write(git_path("common/gitdir.bkl"), &sb);
+			strbuf_release(&sb);
+		}
 	}
 	else if (actions == ACTION_SET) {
 		int ret;

@@ -1895,7 +1895,8 @@ static int index_mem(struct index_state *istate,
 	 */
 	if ((type == OBJ_BLOB) && path) {
 		struct strbuf nbuf = STRBUF_INIT;
-		if (convert_to_git(istate, path, buf, size, &nbuf,
+		if (istate &&
+		    convert_to_git(istate, path, buf, size, &nbuf,
 				   get_conv_flags(flags))) {
 			buf = strbuf_detach(&nbuf, &size);
 			re_allocated = 1;
@@ -2023,12 +2024,13 @@ int index_fd(struct index_state *istate, struct object_id *oid,
 	 * Call xsize_t() only when needed to avoid potentially unnecessary
 	 * die() for large files.
 	 */
-	if (type == OBJ_BLOB && path && would_convert_to_git_filter_fd(istate, path))
+	if (type == OBJ_BLOB && path && istate &&
+	    would_convert_to_git_filter_fd(istate, path))
 		ret = index_stream_convert_blob(istate, oid, fd, path, flags);
 	else if (!S_ISREG(st->st_mode))
 		ret = index_pipe(istate, oid, fd, type, path, flags);
 	else if (st->st_size <= big_file_threshold || type != OBJ_BLOB ||
-		 (path && would_convert_to_git(istate, path)))
+		 (path && istate && would_convert_to_git(istate, path)))
 		ret = index_core(istate, oid, fd, xsize_t(st->st_size),
 				 type, path, flags);
 	else

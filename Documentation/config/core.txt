@@ -316,6 +316,11 @@ This value is true by default in a repository that has
 a working directory associated with it, and false by
 default in a bare repository.
 
+core.backupLog::
+	If true, many commands will keep backup content in object database
+	before they modify some file. See linkgit:git-backup-log[1] for more
+	information.
+
 core.repositoryFormatVersion::
 	Internal variable identifying the repository format and layout
 	version.

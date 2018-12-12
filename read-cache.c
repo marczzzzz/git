@@ -25,6 +25,7 @@
 #include "fsmonitor.h"
 #include "thread-utils.h"
 #include "progress.h"
+#include "backup-log.h"
 
 /* Mask for the name length in ce_flags in the on-disk index */
 
@@ -698,6 +699,21 @@ void set_object_name_for_intent_to_add_entry(struct cache_entry *ce)
 	oidcpy(&ce->oid, &oid);
 }
 
+static void update_backup_log(struct index_state *istate,
+			      const struct object_id *prev,
+			      const struct cache_entry *ce)
+{
+	struct strbuf *sb = istate->backup_log;
+
+	if (!sb) {
+		sb = xmalloc(sizeof(*sb));
+		strbuf_init(sb, 0);
+		istate->backup_log = sb;
+	}
+
+	bkl_append(sb, ce->name, prev, &ce->oid);
+}
+
 int add_to_index(struct index_state *istate, const char *path, struct stat *st, int flags)
 {
 	int namelen, was_same;
@@ -772,6 +788,7 @@ int add_to_index(struct index_state *istate, const char *path, struct stat *st, 
 			discard_cache_entry(ce);
 			return error(_("unable to index file '%s'"), path);
 		}
+		add_option |= flags & ADD_CACHE_LOG_UPDATES;
 	} else
 		set_object_name_for_intent_to_add_entry(ce);
 
@@ -1264,6 +1281,7 @@ static int add_index_entry_with_check(struct index_state *istate, struct cache_e
 	int ok_to_replace = option & ADD_CACHE_OK_TO_REPLACE;
 	int skip_df_check = option & ADD_CACHE_SKIP_DFCHECK;
 	int new_only = option & ADD_CACHE_NEW_ONLY;
+	struct object_id backup_prev;
 
 	if (!(option & ADD_CACHE_KEEP_CACHE_TREE))
 		cache_tree_invalidate_path(istate, ce->name);
@@ -1280,8 +1298,12 @@ static int add_index_entry_with_check(struct index_state *istate, struct cache_e
 
 	/* existing match? Just replace it. */
 	if (pos >= 0) {
-		if (!new_only)
-			replace_index_entry(istate, pos, ce);
+		if (new_only)
+			return 0;
+
+		if (option & ADD_CACHE_LOG_UPDATES)
+			update_backup_log(istate, &istate->cache[pos]->oid, ce);
+		replace_index_entry(istate, pos, ce);
 		return 0;
 	}
 	pos = -pos-1;
@@ -1289,6 +1311,7 @@ static int add_index_entry_with_check(struct index_state *istate, struct cache_e
 	if (!(option & ADD_CACHE_KEEP_CACHE_TREE))
 		untracked_cache_add_to_index(istate, ce->name);
 
+	oidclr(&backup_prev);
 	/*
 	 * Inserting a merged entry ("stage 0") into the index
 	 * will always replace all non-merged entries..
@@ -1296,6 +1319,8 @@ static int add_index_entry_with_check(struct index_state *istate, struct cache_e
 	if (pos < istate->cache_nr && ce_stage(ce) == 0) {
 		while (ce_same_name(istate->cache[pos], ce)) {
 			ok_to_add = 1;
+			if (ce_stage(ce) == 2)
+				oidcpy(&backup_prev, &istate->cache[pos]->oid);
 			if (!remove_index_entry_at(istate, pos))
 				break;
 		}
@@ -1314,6 +1339,8 @@ static int add_index_entry_with_check(struct index_state *istate, struct cache_e
 		pos = index_name_stage_pos(istate, ce->name, ce_namelen(ce), ce_stage(ce));
 		pos = -pos-1;
 	}
+	if (option & ADD_CACHE_LOG_UPDATES)
+		update_backup_log(istate, &backup_prev, ce);
 	return pos + 1;
 }
 
@@ -2340,6 +2367,10 @@ int discard_index(struct index_state *istate)
 	discard_split_index(istate);
 	free_untracked_cache(istate->untracked);
 	istate->untracked = NULL;
+	if (istate->backup_log) {
+		strbuf_release(istate->backup_log);
+		FREE_AND_NULL(istate->backup_log);
+	}
 
 	if (istate->ce_mem_pool) {
 		mem_pool_discard(istate->ce_mem_pool, should_validate_cache_entries());
@@ -3173,6 +3204,20 @@ int write_locked_index(struct index_state *istate, struct lock_file *lock,
 
 	if (istate->fsmonitor_last_update)
 		fill_fsmonitor_bitmap(istate);
+
+	if (istate->backup_log && istate->backup_log->len) {
+		struct strbuf sb = STRBUF_INIT;
+		char *path = get_locked_file_path(lock);
+
+		strbuf_addf(&sb, "%s.bkl", path);
+		free(path);
+		if (bkl_write(sb.buf, istate->backup_log)) {
+			strbuf_release(&sb);
+			return -1;
+		}
+		strbuf_reset(istate->backup_log);
+		strbuf_release(&sb);
+	}
 
 	if (!si || alternate_index_output ||
 	    (istate->cache_changed & ~EXTMASK)) {

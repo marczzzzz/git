@@ -21,6 +21,7 @@
 #include "quote.h"
 #include "rerere.h"
 #include "apply.h"
+#include "backup-log.h"
 
 static void git_apply_config(void)
 {
@@ -226,6 +227,7 @@ struct patch {
 	char old_oid_prefix[GIT_MAX_HEXSZ + 1];
 	char new_oid_prefix[GIT_MAX_HEXSZ + 1];
 	struct patch *next;
+	struct object_id old_oid;
 
 	/* three-way fallback result */
 	struct object_id threeway_stage[3];
@@ -4262,6 +4264,16 @@ static void patch_stats(struct apply_state *state, struct patch *patch)
 static int remove_file(struct apply_state *state, struct patch *patch, int rmdir_empty)
 {
 	if (state->update_index && !state->ita_only) {
+		if (state->backup_log) {
+			int pos = index_name_pos(state->repo->index,
+						 patch->old_name,
+						 strlen(patch->old_name));
+			if (pos >= 0)
+				oidcpy(&patch->old_oid,
+				       &state->repo->index->cache[pos]->oid);
+			else
+				oidclr(&patch->old_oid);
+		}
 		if (remove_file_from_index(state->repo->index, patch->old_name) < 0)
 			return error(_("unable to remove %s from index"), patch->old_name);
 	}
@@ -4277,7 +4289,8 @@ static int add_index_file(struct apply_state *state,
 			  const char *path,
 			  unsigned mode,
 			  void *buf,
-			  unsigned long size)
+			  unsigned long size,
+			  const struct object_id *old_oid)
 {
 	struct stat st;
 	struct cache_entry *ce;
@@ -4314,6 +4327,16 @@ static int add_index_file(struct apply_state *state,
 			return error(_("unable to create backing store "
 				       "for newly created file %s"), path);
 		}
+	}
+	if (state->backup_log) {
+		struct strbuf *sb = state->repo->index->backup_log;
+
+		if (!sb) {
+			sb = xmalloc(sizeof(*sb));
+			strbuf_init(sb, 0);
+			state->repo->index->backup_log = sb;
+		}
+		bkl_append(sb, ce->name, old_oid, &ce->oid);
 	}
 	if (add_index_entry(state->repo->index, ce, ADD_CACHE_OK_TO_ADD) < 0) {
 		discard_cache_entry(ce);
@@ -4485,7 +4508,8 @@ static int create_file(struct apply_state *state, struct patch *patch)
 	if (patch->conflicted_threeway)
 		return add_conflicted_stages_file(state, patch);
 	else if (state->update_index)
-		return add_index_file(state, path, mode, buf, size);
+		return add_index_file(state, path, mode, buf, size,
+				      &patch->old_oid);
 	return 0;
 }
 
@@ -4660,6 +4684,7 @@ static int apply_patch(struct apply_state *state,
 	struct patch *list = NULL, **listp = &list;
 	int skipped_patch = 0;
 	int res = 0;
+	int core_backup_log = 0;
 
 	state->patch_input_file = filename;
 	if (read_patch_file(&buf, fd) < 0)
@@ -4721,6 +4746,13 @@ static int apply_patch(struct apply_state *state,
 		res = -128;
 		goto end;
 	}
+
+	if (state->backup_log &&
+	    (!state->update_index ||
+	     repo_config_get_bool(state->repo, "core.backupLog",
+				  &core_backup_log) ||
+	     !core_backup_log))
+		state->backup_log = 0;
 
 	if (state->check || state->apply) {
 		int r = check_patch_list(state, list);
@@ -4983,6 +5015,8 @@ int apply_parse_options(int argc, const char **argv,
 			N_("mark new files with `git add --intent-to-add`")),
 		OPT_BOOL(0, "cached", &state->cached,
 			N_("apply a patch without touching the working tree")),
+		OPT_BOOL(0, "keep-backup", &state->backup_log,
+			 N_("log index changes if the feature is enabled")),
 		OPT_BOOL_F(0, "unsafe-paths", &state->unsafe_paths,
 			   N_("accept a patch that touches outside the working area"),
 			   PARSE_OPT_NOCOMPLETE),

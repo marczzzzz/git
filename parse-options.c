@@ -708,7 +708,7 @@ static int usage_with_options_internal(struct parse_opt_ctx_t *ctx,
 
 	need_newline = 1;
 
-	for (; opts->type != OPTION_END; opts++) {
+	for (; opts && opts->type != OPTION_END; opts++) {
 		size_t pos;
 		int pad;
 

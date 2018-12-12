@@ -28,6 +28,8 @@
 static int allow_add;
 static int allow_remove;
 static int allow_replace;
+static int update_backup_log;
+static int core_backup_log;
 static int info_only;
 static int force_remove;
 static int verbose;
@@ -289,6 +291,7 @@ static int add_one_path(const struct cache_entry *old, const char *path, int len
 	}
 	option = allow_add ? ADD_CACHE_OK_TO_ADD : 0;
 	option |= allow_replace ? ADD_CACHE_OK_TO_REPLACE : 0;
+	option |= update_backup_log && core_backup_log ? ADD_CACHE_LOG_UPDATES : 0;
 	if (add_cache_entry(ce, option)) {
 		discard_cache_entry(ce);
 		return error("%s: cannot add to the index - missing --add option?", path);
@@ -419,6 +422,7 @@ static int add_cacheinfo(unsigned int mode, const struct object_id *oid,
 		ce->ce_flags |= CE_VALID;
 	option = allow_add ? ADD_CACHE_OK_TO_ADD : 0;
 	option |= allow_replace ? ADD_CACHE_OK_TO_REPLACE : 0;
+	option |= update_backup_log && core_backup_log ? ADD_CACHE_LOG_UPDATES : 0;
 	if (add_cache_entry(ce, option))
 		return error("%s: cannot add to the index - missing --add option?",
 			     path);
@@ -969,6 +973,8 @@ int cmd_update_index(int argc, const char **argv, const char *prefix)
 			N_("let files replace directories and vice-versa"), 1),
 		OPT_SET_INT(0, "remove", &allow_remove,
 			N_("notice files missing from worktree"), 1),
+		OPT_SET_INT(0, "keep-backup", &update_backup_log,
+			N_("update index backup log if core.backupLog is set"), 1),
 		OPT_BIT(0, "unmerged", &refresh_args.flags,
 			N_("refresh even if index contains unmerged entries"),
 			REFRESH_UNMERGED),
@@ -1060,6 +1066,7 @@ int cmd_update_index(int argc, const char **argv, const char *prefix)
 		usage_with_options(update_index_usage, options);
 
 	git_config(git_default_config, NULL);
+	repo_config_get_bool(the_repository, "core.backupLog", &core_backup_log);
 
 	/* we will diagnose later if it turns out that we need to update it */
 	newfd = hold_locked_index(&lock_file, 0);

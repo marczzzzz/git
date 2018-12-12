@@ -11,6 +11,7 @@
 #include "../dir.h"
 #include "../chdir-notify.h"
 #include "worktree.h"
+#include "backup-log.h"
 
 /*
  * This backend uses the following flags in `ref_update::flags` for
@@ -1873,6 +1874,35 @@ static int files_reflog_exists(struct ref_store *ref_store,
 	return ret;
 }
 
+static void backup_reflog(struct files_ref_store *refs,
+			  const char *reflog_path,
+			  const char *refname)
+{
+	int core_backup_log = 0;
+	struct stat st;
+	struct strbuf line = STRBUF_INIT;
+	struct strbuf path = STRBUF_INIT;
+	struct object_id old, new;
+
+	repo_config_get_bool(the_repository, "core.backuplog",
+			     &core_backup_log);
+	if (!core_backup_log)
+		return;
+	if (ref_type(refname) != REF_TYPE_NORMAL)
+		return;
+	if (lstat(reflog_path, &st) ||
+	    index_path(NULL, &old, reflog_path, &st, HASH_WRITE_OBJECT))
+		return;
+
+	strbuf_addf(&path, "logs/%s", refname);
+	oidclr(&new);
+	bkl_append(&line, path.buf, &old, &new);
+	strbuf_release(&path);
+	mkdir_in_gitdir(git_path("common"));
+	bkl_write(git_path("common/gitdir.bkl"), &line);
+	strbuf_release(&line);
+}
+
 static int files_delete_reflog(struct ref_store *ref_store,
 			       const char *refname)
 {
@@ -1882,6 +1912,7 @@ static int files_delete_reflog(struct ref_store *ref_store,
 	int ret;
 
 	files_reflog_path(refs, &sb, refname);
+	backup_reflog(refs, sb.buf, refname);
 	ret = remove_path(sb.buf);
 	strbuf_release(&sb);
 	return ret;
@@ -2797,6 +2828,7 @@ static int files_transaction_finish(struct ref_store *ref_store,
 		    !(update->flags & REF_IS_PRUNING)) {
 			strbuf_reset(&sb);
 			files_reflog_path(refs, &sb, update->refname);
+			backup_reflog(refs, sb.buf, update->refname);
 			if (!unlink_or_warn(sb.buf))
 				try_remove_empty_parents(refs, update->refname,
 							 REMOVE_EMPTY_PARENTS_REFLOG);

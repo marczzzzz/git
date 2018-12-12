@@ -60,6 +60,7 @@ struct unpack_trees_options {
 		     exiting_early,
 		     show_all_errors,
 		     dry_run;
+	int keep_backup;
 	const char *prefix;
 	int cache_bottom;
 	struct dir_struct *dir;
@@ -83,6 +84,8 @@ struct unpack_trees_options {
 	struct index_state *src_index;
 	struct index_state result;
 
+	struct strbuf backup_log;
+
 	struct exclude_list *el; /* for internal use */
 };
 
@@ -90,7 +93,8 @@ int unpack_trees(unsigned n, struct tree_desc *t,
 		 struct unpack_trees_options *options);
 
 int verify_uptodate(const struct cache_entry *ce,
-		    struct unpack_trees_options *o);
+		    struct unpack_trees_options *o,
+		    struct object_id *old_hash);
 
 int threeway_merge(const struct cache_entry * const *stages,
 		   struct unpack_trees_options *o);

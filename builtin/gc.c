@@ -27,6 +27,7 @@
 #include "pack-objects.h"
 #include "blob.h"
 #include "tree.h"
+#include "backup-log.h"
 
 #define FAILED_RUN "failed to run %s"
 
@@ -656,6 +657,8 @@ int cmd_gc(int argc, const char **argv, const char *prefix)
 
 	if (run_command_v_opt(rerere.argv, RUN_GIT_CMD))
 		die(FAILED_RUN, rerere.argv[0]);
+
+	bkl_prune_all_or_die(the_repository, time(NULL) - 90 * 24 * 3600);
 
 	report_garbage = report_pack_garbage;
 	reprepare_packed_git(the_repository);

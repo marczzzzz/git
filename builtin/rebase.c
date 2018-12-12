@@ -566,8 +566,12 @@ static int reset_head(struct object_id *oid, const char *action,
 	unpack_tree_opts.fn = reset_hard ? oneway_merge : twoway_merge;
 	unpack_tree_opts.update = 1;
 	unpack_tree_opts.merge = 1;
-	if (!detach_head)
+	if (!detach_head) {
 		unpack_tree_opts.reset = 1;
+		repo_config_get_bool(the_repository, "core.backupLog",
+				     &unpack_tree_opts.keep_backup);
+	}
+
 
 	if (read_index_unmerged(the_repository->index) < 0) {
 		ret = error(_("could not read index"));

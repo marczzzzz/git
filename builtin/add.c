@@ -393,6 +393,7 @@ int cmd_add(int argc, const char **argv, const char *prefix)
 	int require_pathspec;
 	char *seen = NULL;
 	struct lock_file lock_file = LOCK_INIT;
+	int core_backup_log = 0;
 
 	git_config(add_config, NULL);
 
@@ -438,6 +439,10 @@ int cmd_add(int argc, const char **argv, const char *prefix)
 		 (ignore_add_errors ? ADD_CACHE_IGNORE_ERRORS : 0) |
 		 (!(addremove || take_worktree_changes)
 		  ? ADD_CACHE_IGNORE_REMOVAL : 0));
+
+	repo_config_get_bool(the_repository, "core.backuplog", &core_backup_log);
+	if (core_backup_log)
+		flags |= ADD_CACHE_LOG_UPDATES;
 
 	if (require_pathspec && argc == 0) {
 		fprintf(stderr, _("Nothing specified, nothing added.\n"));

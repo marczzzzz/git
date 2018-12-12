@@ -250,6 +250,9 @@ When `git apply` is used as a "better GNU patch", the user can pass
 the `--unsafe-paths` option to override this safety check.  This option
 has no effect when `--index` or `--cached` is in use.
 
+--keep-backup::
+	Enable index backup log when `--cached` or `--index` is used.
+
 CONFIGURATION
 -------------
 

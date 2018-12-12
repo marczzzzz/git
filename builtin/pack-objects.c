@@ -3233,7 +3233,7 @@ int cmd_pack_objects(int argc, const char **argv, const char *prefix)
 	int all_progress_implied = 0;
 	struct argv_array rp = ARGV_ARRAY_INIT;
 	int rev_list_unpacked = 0, rev_list_all = 0, rev_list_reflog = 0;
-	int rev_list_index = 0;
+	int rev_list_index = 0, rev_list_backuplog = 0;
 	struct string_list keep_pack_list = STRING_LIST_INIT_NODUP;
 	struct option pack_objects_options[] = {
 		OPT_SET_INT('q', "quiet", &progress,
@@ -3280,6 +3280,9 @@ int cmd_pack_objects(int argc, const char **argv, const char *prefix)
 			      1, PARSE_OPT_NONEG),
 		OPT_SET_INT_F(0, "reflog", &rev_list_reflog,
 			      N_("include objects referred by reflog entries"),
+			      1, PARSE_OPT_NONEG),
+		OPT_SET_INT_F(0, "backup-log", &rev_list_backuplog,
+			      N_("include objects referred by backup-log entries"),
 			      1, PARSE_OPT_NONEG),
 		OPT_SET_INT_F(0, "indexed-objects", &rev_list_index,
 			      N_("include objects referred to by the index"),
@@ -3368,6 +3371,10 @@ int cmd_pack_objects(int argc, const char **argv, const char *prefix)
 	if (rev_list_reflog) {
 		use_internal_rev_list = 1;
 		argv_array_push(&rp, "--reflog");
+	}
+	if (rev_list_backuplog) {
+		use_internal_rev_list = 1;
+		argv_array_push(&rp, "--backup-log");
 	}
 	if (rev_list_index) {
 		use_internal_rev_list = 1;

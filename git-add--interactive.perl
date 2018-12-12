@@ -102,28 +102,28 @@ sub apply_patch_for_stash;
 my %patch_modes = (
 	'stage' => {
 		DIFF => 'diff-files -p',
-		APPLY => sub { apply_patch 'apply --cached', @_; },
+		APPLY => sub { apply_patch 'apply --cached --keep-backup', @_; },
 		APPLY_CHECK => 'apply --cached',
 		FILTER => 'file-only',
 		IS_REVERSE => 0,
 	},
 	'stash' => {
 		DIFF => 'diff-index -p HEAD',
-		APPLY => sub { apply_patch 'apply --cached', @_; },
+		APPLY => sub { apply_patch 'apply --cached --keep-backup', @_; },
 		APPLY_CHECK => 'apply --cached',
 		FILTER => undef,
 		IS_REVERSE => 0,
 	},
 	'reset_head' => {
 		DIFF => 'diff-index -p --cached',
-		APPLY => sub { apply_patch 'apply -R --cached', @_; },
+		APPLY => sub { apply_patch 'apply -R --cached --keep-backup', @_; },
 		APPLY_CHECK => 'apply -R --cached',
 		FILTER => 'index-only',
 		IS_REVERSE => 1,
 	},
 	'reset_nothead' => {
 		DIFF => 'diff-index -R -p --cached',
-		APPLY => sub { apply_patch 'apply --cached', @_; },
+		APPLY => sub { apply_patch 'apply --cached --keep-backup', @_; },
 		APPLY_CHECK => 'apply --cached',
 		FILTER => 'index-only',
 		IS_REVERSE => 0,
@@ -628,7 +628,7 @@ sub update_cmd {
 				       HEADER => $status_head, },
 				     @mods);
 	if (@update) {
-		system(qw(git update-index --add --remove --),
+		system(qw(git update-index --add --remove --keep-backup --),
 		       map { $_->{VALUE} } @update);
 		say_n_paths('updated', @update);
 	}
@@ -648,7 +648,7 @@ sub revert_cmd {
 			my @lines = run_cmd_pipe(qw(git ls-tree HEAD --),
 						 map { $_->{VALUE} } @update);
 			my $fh;
-			open $fh, '| git update-index --index-info'
+			open $fh, '| git update-index --keep-backup --index-info'
 			    or die;
 			for (@lines) {
 				print $fh $_;
@@ -673,7 +673,7 @@ sub add_untracked_cmd {
 	my @add = list_and_choose({ PROMPT => __('Add untracked') },
 				  list_untracked());
 	if (@add) {
-		system(qw(git update-index --add --), @add);
+		system(qw(git update-index --keep-backup --add --), @add);
 		say_n_paths('added', @add);
 	} else {
 		print __("No untracked files.\n");

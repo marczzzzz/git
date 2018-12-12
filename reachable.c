@@ -12,6 +12,7 @@
 #include "packfile.h"
 #include "worktree.h"
 #include "object-store.h"
+#include "backup-log.h"
 
 struct connectivity_progress {
 	struct progress *progress;
@@ -184,6 +185,8 @@ void mark_reachable_objects(struct rev_info *revs, int mark_reflog,
 	/* Add all reflog info */
 	if (mark_reflog)
 		add_reflogs_to_pending(revs, 0);
+
+	add_backup_logs_to_pending(revs, 0);
 
 	cp.progress = progress;
 	cp.count = 0;

@@ -51,6 +51,7 @@ struct apply_state {
 	int check_index; /* preimage must match the indexed version */
 	int update_index; /* check_index && apply */
 	int ita_only;	  /* add intent-to-add entries to the index */
+	int backup_log;	  /* enable backup log */
 
 	/* These control cosmetic aspect of the output */
 	int diffstat; /* just show a diffstat, and don't actually apply */

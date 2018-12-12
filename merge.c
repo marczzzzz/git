@@ -1,4 +1,5 @@
 #include "cache.h"
+#include "config.h"
 #include "diff.h"
 #include "diffcore.h"
 #include "lockfile.h"
@@ -85,6 +86,7 @@ int checkout_fast_forward(struct repository *r,
 		dir.flags |= DIR_SHOW_IGNORED;
 		setup_standard_excludes(&dir);
 		opts.dir = &dir;
+		repo_config_get_bool(r, "core.backupLog", &opts.keep_backup);
 	}
 
 	opts.head_idx = 1;

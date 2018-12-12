@@ -21,6 +21,7 @@
 /git-apply
 /git-archimport
 /git-archive
+/git-backup-log
 /git-bisect
 /git-bisect--helper
 /git-blame

@@ -499,6 +499,8 @@ static int reset_tree(struct tree *tree, const struct checkout_opts *o,
 	opts.verbose_update = o->show_progress;
 	opts.src_index = &the_index;
 	opts.dst_index = &the_index;
+	repo_config_get_bool(the_repository, "core.backupLog",
+			     &opts.keep_backup);
 	parse_tree(tree);
 	init_tree_desc(&tree_desc, tree->buffer, tree->size);
 	switch (unpack_trees(1, &tree_desc, &opts)) {
@@ -696,6 +698,8 @@ static int merge_working_tree(const struct checkout_opts *opts,
 			topts.dir = xcalloc(1, sizeof(*topts.dir));
 			topts.dir->flags |= DIR_SHOW_IGNORED;
 			setup_standard_excludes(topts.dir);
+			repo_config_get_bool(the_repository, "core.backupLog",
+					     &topts.keep_backup);
 		}
 		tree = parse_tree_indirect(old_branch_info->commit ?
 					   &old_branch_info->commit->object.oid :

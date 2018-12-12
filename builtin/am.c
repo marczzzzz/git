@@ -1886,6 +1886,9 @@ static int fast_forward_to(struct tree *head, struct tree *remote, int reset)
 	opts.update = 1;
 	opts.merge = 1;
 	opts.reset = reset;
+	if (opts.reset)
+		repo_config_get_bool(the_repository, "core.backupLog",
+				     &opts.keep_backup);
 	opts.fn = twoway_merge;
 	init_tree_desc(&t[0], head->buffer, head->size);
 	init_tree_desc(&t[1], remote->buffer, remote->size);

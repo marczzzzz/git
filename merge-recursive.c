@@ -882,7 +882,7 @@ static int was_dirty(struct merge_options *o, const char *path)
 
 	ce = index_file_exists(o->unpack_opts.src_index,
 			       path, strlen(path), ignore_case);
-	dirty = verify_uptodate(ce, &o->unpack_opts) != 0;
+	dirty = verify_uptodate(ce, &o->unpack_opts, NULL) != 0;
 	return dirty;
 }
 

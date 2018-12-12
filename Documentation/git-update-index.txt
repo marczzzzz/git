@@ -218,6 +218,9 @@ will remove the intended effect of the option.
 	the configured value will take effect next time the index is
 	read and this will remove the intended effect of the option.
 
+--keep-backup::
+	Enable index backup log.
+
 \--::
 	Do not interpret any more arguments as options.
 

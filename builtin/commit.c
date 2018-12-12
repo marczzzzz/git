@@ -268,7 +268,7 @@ static int list_paths(struct string_list *list, const char *with_tree,
 	return ret;
 }
 
-static void add_remove_files(struct string_list *list)
+static void add_remove_files(struct string_list *list, int flags)
 {
 	int i;
 	for (i = 0; i < list->nr; i++) {
@@ -280,7 +280,7 @@ static void add_remove_files(struct string_list *list)
 			continue;
 
 		if (!lstat(p->string, &st)) {
-			if (add_to_cache(p->string, &st, 0))
+			if (add_to_cache(p->string, &st, flags))
 				die(_("updating files failed"));
 		} else
 			remove_file_from_cache(p->string);
@@ -331,7 +331,13 @@ static const char *prepare_index(int argc, const char **argv, const char *prefix
 	struct string_list partial = STRING_LIST_INIT_DUP;
 	struct pathspec pathspec;
 	int refresh_flags = REFRESH_QUIET;
+	int add_flags = 0;
+	int core_backup_log = 0;
 	const char *ret;
+
+	repo_config_get_bool(the_repository, "core.backuplog", &core_backup_log);
+	if (core_backup_log)
+		add_flags = ADD_CACHE_LOG_UPDATES;
 
 	if (is_status)
 		refresh_flags |= REFRESH_UNMERGED;
@@ -391,7 +397,7 @@ static const char *prepare_index(int argc, const char **argv, const char *prefix
 	 */
 	if (all || (also && pathspec.nr)) {
 		hold_locked_index(&index_lock, LOCK_DIE_ON_ERROR);
-		add_files_to_cache(also ? prefix : NULL, &pathspec, 0);
+		add_files_to_cache(also ? prefix : NULL, &pathspec, add_flags);
 		refresh_cache_or_die(refresh_flags);
 		update_main_cache_tree(WRITE_TREE_SILENT);
 		if (write_locked_index(&the_index, &index_lock, 0))
@@ -460,7 +466,7 @@ static const char *prepare_index(int argc, const char **argv, const char *prefix
 		die(_("cannot read the index"));
 
 	hold_locked_index(&index_lock, LOCK_DIE_ON_ERROR);
-	add_remove_files(&partial);
+	add_remove_files(&partial, add_flags);
 	refresh_cache(REFRESH_QUIET);
 	update_main_cache_tree(WRITE_TREE_SILENT);
 	if (write_locked_index(&the_index, &index_lock, 0))
@@ -472,7 +478,7 @@ static const char *prepare_index(int argc, const char **argv, const char *prefix
 				  LOCK_DIE_ON_ERROR);
 
 	create_base_index(current_head);
-	add_remove_files(&partial);
+	add_remove_files(&partial, 0);
 	refresh_cache(REFRESH_QUIET);
 
 	if (write_locked_index(&the_index, &false_lock, 0))

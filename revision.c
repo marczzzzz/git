@@ -27,6 +27,7 @@
 #include "commit-reach.h"
 #include "commit-graph.h"
 #include "prio-queue.h"
+#include "backup-log.h"
 
 volatile show_early_output_fn_t show_early_output;
 
@@ -2303,6 +2304,8 @@ static int handle_revision_pseudo_opt(const char *submodule,
 		clear_ref_exclusion(&revs->ref_excludes);
 	} else if (!strcmp(arg, "--reflog")) {
 		add_reflogs_to_pending(revs, *flags);
+	} else if (!strcmp(arg, "--backup-log")) {
+		add_backup_logs_to_pending(revs, *flags);
 	} else if (!strcmp(arg, "--indexed-objects")) {
 		add_index_objects_to_pending(revs, *flags);
 	} else if (!strcmp(arg, "--not")) {

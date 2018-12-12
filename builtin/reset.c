@@ -67,6 +67,8 @@ static int reset_index(const struct object_id *oid, int reset_type, int quiet)
 		break;
 	case HARD:
 		opts.update = 1;
+		repo_config_get_bool(the_repository, "core.backupLog",
+				     &opts.keep_backup);
 		/* fallthrough */
 	default:
 		opts.reset = 1;
