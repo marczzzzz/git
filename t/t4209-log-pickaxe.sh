@@ -106,4 +106,44 @@ test_expect_success 'log -S --no-textconv (missing textconv tool)' '
 	rm .gitattributes
 '
 
+test_expect_success 'log -G ignores binary files' '
+	git checkout --orphan orphan1 &&
+	printf "a\0a" >data.bin &&
+	git add data.bin &&
+	git commit -m "message" &&
+	git log -Ga >result &&
+	test_must_be_empty result
+'
+
+test_expect_success 'log -G looks into binary files with -a' '
+	git checkout --orphan orphan2 &&
+	printf "a\0a" >data.bin &&
+	git add data.bin &&
+	git commit -m "message" &&
+	git log -a -Ga >actual &&
+	git log >expected &&
+	test_cmp actual expected
+'
+
+test_expect_success 'log -G looks into binary files with textconv filter' '
+	git checkout --orphan orphan3 &&
+	echo "* diff=bin" >.gitattributes &&
+	printf "a\0a" >data.bin &&
+	git add data.bin &&
+	git commit -m "message" &&
+	git -c diff.bin.textconv=cat log -Ga >actual &&
+	git log >expected &&
+	test_cmp actual expected
+'
+
+test_expect_success 'log -S looks into binary files' '
+	git checkout --orphan orphan4 &&
+	printf "a\0a" >data.bin &&
+	git add data.bin &&
+	git commit -m "message" &&
+	git log -Sa >actual &&
+	git log >expected &&
+	test_cmp actual expected
+'
+
 test_done
