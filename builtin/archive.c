@@ -59,8 +59,6 @@ static int run_remote_archiver(int argc, const char **argv,
 	if (strcmp(buf, "ACK")) {
 		if (starts_with(buf, "NACK "))
 			die(_("git archive: NACK %s"), buf + 5);
-		if (starts_with(buf, "ERR "))
-			die(_("remote error: %s"), buf + 4);
 		die(_("git archive: protocol error"));
 	}
 
