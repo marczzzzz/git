@@ -1437,6 +1437,9 @@ test_expect_success 'double dash "git checkout"' '
 	--guess Z
 	--no-guess Z
 	--no-... Z
+	--overlay Z
+	--cached Z
+	--ignore-unmatched Z
 	EOF
 '
 

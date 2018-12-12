@@ -78,4 +78,13 @@ test_expect_success 'do not touch files that are already up-to-date' '
 	test_cmp expect actual
 '
 
+test_expect_success 'checkout --ignore-unmatched' '
+	test_commit file1 &&
+	echo changed >file1.t &&
+	git checkout --ignore-unmatched -- file1.t unknown-file &&
+	echo file1 >expect &&
+	test_cmp expect file1.t
+
+'
+
 test_done

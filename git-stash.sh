@@ -331,19 +331,15 @@ push_stash () {
 
 	if test -z "$patch_mode"
 	then
-		test "$untracked" = "all" && CLEAN_X_OPTION=-x || CLEAN_X_OPTION=
-		if test -n "$untracked" && test $# = 0
+		test "$untracked" = "all" && CLEAN_X_OPTION=-X || CLEAN_X_OPTION=
+		if test -n "$untracked"
 		then
-			git clean --force --quiet -d $CLEAN_X_OPTION
+			git clean --force --quiet -d $CLEAN_X_OPTION -- "$@"
 		fi
 
 		if test $# != 0
 		then
-			test -z "$untracked" && UPDATE_OPTION="-u" || UPDATE_OPTION=
-			test "$untracked" = "all" && FORCE_OPTION="--force" || FORCE_OPTION=
-			git add $UPDATE_OPTION $FORCE_OPTION -- "$@"
-			git diff-index -p --cached --binary HEAD -- "$@" |
-			git apply --index -R
+			git checkout --quiet --no-overlay --ignore-unmatched HEAD -- "$@"
 		else
 			git reset --hard -q
 		fi

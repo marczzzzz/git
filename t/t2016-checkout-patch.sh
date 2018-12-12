@@ -108,6 +108,14 @@ test_expect_success PERL 'path limiting works: foo inside dir' '
 	verify_state dir/foo head head
 '
 
+test_expect_success PERL 'git checkout --cached -p' '
+	set_and_save_state dir/foo work work &&
+	test_write_lines n y | git checkout --cached -p >output &&
+	verify_state dir/foo work head &&
+	verify_saved_state bar &&
+	test_i18ngrep "Unstage" output
+'
+
 test_expect_success PERL 'none of this moved HEAD' '
 	verify_saved_head
 '
