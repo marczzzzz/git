@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Meter Data Import WS (Staging)" max_length="40" name="x_snc_mz_spayg_meter_data_import_ws" type="collection">
+        <element attributes="import_attribute_name=u_evu,edge_encryption_enabled=true" label="Evu" max_length="40" name="u_evu" type="string"/>
+        <element attributes="import_attribute_name=u_timestamp,edge_encryption_enabled=true" label="Timestamp" max_length="40" name="u_timestamp" type="string"/>
+        <element attributes="import_attribute_name=u_unit,edge_encryption_enabled=true" label="Unit" max_length="40" name="u_unit" type="string"/>
+        <element attributes="import_attribute_name=u_value,edge_encryption_enabled=true" label="Value" max_length="40" name="u_value" type="string"/>
+        <element attributes="import_attribute_name=u_zaehlpunktnummer,edge_encryption_enabled=true" label="Zaehlpunktnummer" max_length="40" name="u_zaehlpunktnummer" type="string"/>
+    </element>
+</database>

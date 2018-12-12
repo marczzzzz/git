@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="business_partner" label="Business Partner" language="en" table="x_snc_mz_spayg_booking">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>business_partner</element>
+            <help/>
+            <hint/>
+            <label>Business Partner</label>
+            <language>en</language>
+            <name>x_snc_mz_spayg_booking</name>
+            <plural>Business Partners</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>christian.tuebing</sys_created_by>
+            <sys_created_on>2018-12-12 13:42:53</sys_created_on>
+            <sys_id>94123b06db1a6b00eb64f9e139961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Business Partner</sys_name>
+            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_mz_spayg_booking_business_partner_en</sys_update_name>
+            <sys_updated_by>christian.tuebing</sys_updated_by>
+            <sys_updated_on>2018-12-12 13:42:53</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

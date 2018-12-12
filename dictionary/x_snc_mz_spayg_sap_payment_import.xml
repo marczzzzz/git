@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="SAP Payment Import (Staging)" max_length="40" name="x_snc_mz_spayg_sap_payment_import" type="collection">
+        <element attributes="import_attribute_name=u_amount" label="Amount" max_length="15" name="u_amount" type="decimal"/>
+        <element attributes="import_attribute_name=u_bpid" label="Business Partner ID" max_length="32" name="u_bpid" type="string"/>
+        <element attributes="import_attribute_name=u_date_time_of_payment" label="Date/Time of Payment" max_length="40" name="u_date_time_of_payment" type="glide_date_time"/>
+        <index name="index">
+            <element name="u_bpid"/>
+        </index>
+    </element>
+</database>

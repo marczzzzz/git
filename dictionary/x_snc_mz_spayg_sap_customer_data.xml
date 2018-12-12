@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="SAP Customer Data (Mockup)" max_length="40" name="x_snc_mz_spayg_sap_customer_data" type="collection">
+        <element display="true" label="Business Partner ID" mandatory="true" max_length="40" name="bp_id" type="string"/>
+        <element label="Given Name" max_length="40" name="given_name" type="string"/>
+        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Tariff Name" max_length="32" name="tariff_name" reference="x_snc_mz_spayg_tariffs_general" type="reference"/>
+        <element label="Metering Point ID" mandatory="true" max_length="40" name="zaehlpunkt" type="string"/>
+        <index name="index">
+            <element name="tariff_name"/>
+        </index>
+    </element>
+</database>

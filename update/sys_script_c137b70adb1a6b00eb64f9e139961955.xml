@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_mz_spayg_booking</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_snc_mz_spayg_booking">state=0^category=2^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="0"/>
+            <item endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>SPAYG calcualte usage price</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	current.amount = -current.consumption * current.tariff.unit_price;
+	current.state = "1";
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>christian.tuebing</sys_created_by>
+        <sys_created_on>2018-12-12 14:07:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c137b70adb1a6b00eb64f9e139961955</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SPAYG calcualte usage price</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_update_name>sys_script_c137b70adb1a6b00eb64f9e139961955</sys_update_name>
+        <sys_updated_by>christian.tuebing</sys_updated_by>
+        <sys_updated_on>2018-12-12 14:10:18</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c137b70adb1a6b00eb64f9e139961955"/>
+</record_update>

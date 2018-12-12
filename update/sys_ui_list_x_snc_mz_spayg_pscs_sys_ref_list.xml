@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_mz_spayg_pscs" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="x_snc_mz_spayg_pscs" element="NULL" name="x_snc_mz_spayg_pscs" parent="NULL" relationship="NULL" sys_domain="global" view="0d291043db112300eb64f9e139961956">be0cfbcadb1a6b00eb64f9e13996192c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>christian.tuebing</sys_created_by>
+            <sys_created_on>2018-12-12 14:26:27</sys_created_on>
+            <sys_id>f60cfbcadb1a6b00eb64f9e1399619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>christian.tuebing</sys_updated_by>
+            <sys_updated_on>2018-12-12 14:26:27</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_mz_spayg_pscs</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>christian.tuebing</sys_created_by>
+            <sys_created_on>2018-12-12 14:26:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be0cfbcadb1a6b00eb64f9e13996192c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_mz_spayg_pscs</sys_name>
+            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_update_name>sys_ui_list_x_snc_mz_spayg_pscs_sys_ref_list</sys_update_name>
+            <sys_updated_by>christian.tuebing</sys_updated_by>
+            <sys_updated_on>2018-12-12 14:26:27</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">0d291043db112300eb64f9e139961956</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

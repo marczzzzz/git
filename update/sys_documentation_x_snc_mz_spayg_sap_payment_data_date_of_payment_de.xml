@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="date_of_payment" label="Zahlungszeitpunkt" language="de" table="x_snc_mz_spayg_sap_payment_data">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>date_of_payment</element>
+            <help/>
+            <hint/>
+            <label>Zahlungszeitpunkt</label>
+            <language>de</language>
+            <name>x_snc_mz_spayg_sap_payment_data</name>
+            <plural>Zahlungszeitpunkte</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-11 15:57:35</sys_created_on>
+            <sys_id>e4470775db1a2b00736786605b96196c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Zahlungszeitpunkt</sys_name>
+            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_mz_spayg_sap_payment_data_date_of_payment_de</sys_update_name>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-11 15:57:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

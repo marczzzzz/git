@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Meter Data Import (Staging)" max_length="40" name="x_snc_mz_spayg_bloodydataimport" sizeclass="5766" type="collection">
+        <element label="Tariff" max_length="40" name="tariff" type="string"/>
+        <element attributes="import_attribute_name=Einheit,edge_encryption_enabled=true" label="Einheit" max_length="40" name="u_einheit" type="string"/>
+        <element attributes="import_attribute_name=Obis-Code,edge_encryption_enabled=true" label="Obis-Code" max_length="40" name="u_obis_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Selber ergänzt" max_length="40" name="u_selber_ergänzt" type="string"/>
+        <element attributes="import_attribute_name=Status,edge_encryption_enabled=true" label="Status" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=Wert,edge_encryption_enabled=true" label="Wert" max_length="40" name="u_wert" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zählpunktnummer" max_length="40" name="u_zählpunktnummer" type="string"/>
+        <element attributes="import_attribute_name=Zeitstempel,edge_encryption_enabled=true" label="Zeitstempel" max_length="40" name="u_zeitstempel" type="string"/>
+    </element>
+</database>

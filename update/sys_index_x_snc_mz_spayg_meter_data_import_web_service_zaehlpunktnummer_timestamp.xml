@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>zaehlpunktnummer,timestamp</col_name_string>
+        <index_col_name>a2a63bc0db166700eb64f9e13996190c,02b63bc0db166700eb64f9e13996190d</index_col_name>
+        <logical_table_name>x_snc_mz_spayg_meter_data_import_web_service</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-12-06 09:01:40</sys_created_on>
+        <sys_id>2628fb04db166700eb64f9e13996196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_mz_spayg_meter_data_import_web_service</sys_name>
+        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_update_name>sys_index_x_snc_mz_spayg_meter_data_import_web_service_zaehlpunktnummer_timestamp</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-12-06 09:01:40</sys_updated_on>
+        <table display_value="Meter Data Processed (WS)" name="x_snc_mz_spayg_meter_data_import_web_service">dea63bc0db166700eb64f9e139961907</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

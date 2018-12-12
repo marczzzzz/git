@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Tariff - General" max_length="40" name="x_snc_mz_spayg_tariffs_general" type="collection">
+        <element default="0" label="Gross Basic Rate" max_length="20" name="gross_basic_rate" type="currency"/>
+        <element default="0" label="Gross Minimum Turnover" max_length="20" name="gross_minimum_turnover" type="currency"/>
+        <element default="0" label="Net Basic Rate" max_length="20" name="net_basic_rate" type="currency"/>
+        <element default="CHF;6.60" label="Net Minimum Turnover" max_length="20" name="net_minimum_turnover" type="currency"/>
+        <element label="PSC" max_length="32" name="psc" reference="x_snc_mz_spayg_pscs" type="reference"/>
+        <element display="true" label="Tariff Name" max_length="40" name="tariff_name" type="string"/>
+        <element attributes="omit_sys_original=true" label="Unit price" max_length="20" name="unit_price" type="currency"/>
+        <element default="2018-01-01" label="Valid From" max_length="40" name="valid_from" type="glide_date"/>
+        <element default="2020-01-01" label="Valid To" max_length="40" name="valid_to" type="glide_date"/>
+        <element default="7.7" label="VAT" max_length="20" name="vat" type="decimal"/>
+        <index name="index">
+            <element name="psc"/>
+        </index>
+    </element>
+</database>

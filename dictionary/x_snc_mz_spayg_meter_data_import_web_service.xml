@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Verarbeitete Verbrauchswerte (WS)" max_length="40" name="x_snc_mz_spayg_meter_data_import_web_service" type="collection">
+        <element label="Cost" max_length="20" name="cost" type="currency"/>
+        <element label="PSC" max_length="40" name="evu" type="string"/>
+        <element label="Tariff" max_length="32" name="tariff" reference="x_snc_mz_spayg_tariff" type="reference"/>
+        <element label="Timestamp" max_length="40" name="timestamp" type="glide_date_time"/>
+        <element label="Unit" max_length="40" name="unit" type="string"/>
+        <element label="Consumption Value" max_length="40" name="value" type="integer"/>
+        <element label="Metering Point ID" max_length="40" name="zaehlpunktnummer" type="string"/>
+        <index name="index">
+            <element name="zaehlpunktnummer"/>
+            <element name="timestamp"/>
+        </index>
+        <index name="index2">
+            <element name="tariff"/>
+        </index>
+    </element>
+</database>

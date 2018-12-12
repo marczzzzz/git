@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Metering Points" max_length="40" name="x_snc_mz_spayg_metering_points" type="collection">
+        <element display="true" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

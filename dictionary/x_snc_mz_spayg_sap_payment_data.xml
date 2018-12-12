@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="SAP Payment Data Processed" max_length="40" name="x_snc_mz_spayg_sap_payment_data" type="collection">
+        <element label="Business Partner ID" max_length="32" name="bp_id" reference="x_snc_mz_spayg_sap_customer_data" type="reference"/>
+        <element label="Date of Payment" mandatory="true" max_length="40" name="date_of_payment" type="glide_date_time"/>
+        <element label="Payment Amount" mandatory="true" max_length="20" name="payment_amount" type="currency"/>
+        <index name="index">
+            <element name="bp_id"/>
+        </index>
+    </element>
+</database>

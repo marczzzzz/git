@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Verarbeitete Verbrauchswerte" max_length="40" name="x_snc_mz_spayg_bloodycontent" sizeclass="5761" type="collection">
+        <element label="PSC" max_length="40" name="evu" type="string"/>
+        <element label="status" max_length="40" name="status" type="integer"/>
+        <element label="Tariff" max_length="40" name="tariff" type="string"/>
+        <element label="timestamp" max_length="40" name="timestamp" type="glide_date_time"/>
+        <element label="unit" max_length="40" name="unit" type="string"/>
+        <element label="Consumption Value" max_length="40" name="value" type="integer"/>
+        <element label="Metering Point ID" max_length="40" name="zahlpunkt" type="string"/>
+        <index name="index">
+            <element name="zahlpunkt"/>
+            <element name="timestamp"/>
+        </index>
+    </element>
+</database>

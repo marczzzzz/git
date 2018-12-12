@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>timestamp,zahlpunktnummer</col_name_string>
+        <index_col_name>111fbf3fdbca2700eb64f9e139961957,97eebb3fdbca2700eb64f9e13996193b</index_col_name>
+        <logical_table_name>x_snc_mz_spayg_base_consumption</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-12-05 15:02:16</sys_created_on>
+        <sys_id>b2114c88db5a2700736786605b96197c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_mz_spayg_base_consumption</sys_name>
+        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_update_name>sys_index_x_snc_mz_spayg_base_consumption_timestamp_zahlpunktnummer</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-12-05 15:02:16</sys_updated_on>
+        <table/>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

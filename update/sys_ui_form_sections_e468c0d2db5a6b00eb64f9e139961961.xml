@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="e468c0d2db5a6b00eb64f9e139961961" sys_domain="global" table="x_snc_mz_spayg_tariffs_general" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-12 15:20:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e868c0d2db5a6b00eb64f9e139961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_mz_spayg_tariffs_general" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">e468c0d2db5a6b00eb64f9e139961961</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">3d86034adb966b00eb64f9e13996191d</sys_ui_section>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-12 15:20:23</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-12 15:20:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a468c0d2db5a6b00eb64f9e139961964</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_mz_spayg_tariffs_general" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">e468c0d2db5a6b00eb64f9e139961961</sys_ui_form>
+            <sys_ui_section caption="Base Rates and Validity" display_value="Base Rates and Validity" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">ac68c0d2db5a6b00eb64f9e13996195f</sys_ui_section>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-12 15:20:23</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-12 15:20:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a868c0d2db5a6b00eb64f9e139961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_mz_spayg_tariffs_general" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">e468c0d2db5a6b00eb64f9e139961961</sys_ui_form>
+            <sys_ui_section caption="Sub Tariffs" display_value="Sub Tariffs" name="x_snc_mz_spayg_tariffs_general" sys_domain="global" view="Default view">a868c0d2db5a6b00eb64f9e139961960</sys_ui_section>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-12 15:20:23</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_mz_spayg_tariffs_general</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-12 15:20:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e468c0d2db5a6b00eb64f9e139961961</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_mz_spayg_tariffs_general</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_update_name>sys_ui_form_sections_e468c0d2db5a6b00eb64f9e139961961</sys_update_name>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-12 15:20:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
