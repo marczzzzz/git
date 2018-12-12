@@ -31,6 +31,26 @@ verify::
 	When given as the verb, verify the contents of the MIDX file
 	at `<dir>/packs/multi-pack-index`.
 
+expire::
+	When given as the verb, delete the pack-files that are tracked
+	by the MIDX file at `<dir>/packs/multi-pack-index` but have
+	no objects referenced by the MIDX. All objects in these pack-
+	files have another copy in a more-recently modified pack-file.
+	Rewrite the MIDX file afterward to remove all references to
+	these pack-files.
+
+repack::
+	When given as the verb, collect a batch of pack-files whose
+	size are all at most the size given by --batch-size, but
+	whose sizes sum to larger than --batch-size. The batch is
+	selected by greedily adding small pack-files starting with
+	the oldest pack-files that fit the size. Create a new pack-
+	file containing the objects the multi-pack-index indexes
+	into thos pack-files, and rewrite the multi-pack-index to
+	contain that pack-file. A later run of 'git multi-pack-index
+	expire' will delete the pack-files that were part of this
+	batch.
+
 
 EXAMPLES
 --------
