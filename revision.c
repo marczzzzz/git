@@ -100,6 +100,127 @@ void mark_tree_uninteresting(struct repository *r, struct tree *tree)
 	mark_tree_contents_uninteresting(r, tree);
 }
 
+struct paths_and_oids {
+	struct string_list list;
+};
+
+static void paths_and_oids_init(struct paths_and_oids *po)
+{
+	string_list_init(&po->list, 1);
+}
+
+static void paths_and_oids_clear(struct paths_and_oids *po)
+{
+	int i;
+	for (i = 0; i < po->list.nr; i++) {
+		oidset_clear(po->list.items[i].util);
+		free(po->list.items[i].util);
+	}
+
+	string_list_clear(&po->list, 0);
+}
+
+static void paths_and_oids_insert(struct paths_and_oids *po,
+				  const char *path,
+				  const struct object_id *oid)
+{
+	struct string_list_item *item = string_list_insert(&po->list, path);
+	struct oidset *set;
+
+	if (!item->util) {
+		set = xcalloc(1, sizeof(struct oidset));
+		oidset_init(set, 16);
+		item->util = set;
+	} else {
+		set = item->util;
+	}
+
+	oidset_insert(set, oid);
+}
+
+static void add_children_by_path(struct repository *r,
+				 struct tree *tree,
+				 struct paths_and_oids *po)
+{
+	struct tree_desc desc;
+	struct name_entry entry;
+
+	if (!tree)
+		return;
+
+	if (parse_tree_gently(tree, 1) < 0)
+		return;
+
+	init_tree_desc(&desc, tree->buffer, tree->size);
+	while (tree_entry(&desc, &entry)) {
+		switch (object_type(entry.mode)) {
+		case OBJ_TREE:
+			paths_and_oids_insert(po, entry.path, entry.oid);
+
+			if (tree->object.flags & UNINTERESTING) {
+				struct tree *child = lookup_tree(r, entry.oid);
+				if (child)
+					child->object.flags |= UNINTERESTING;
+			}
+			break;
+		case OBJ_BLOB:
+			if (tree->object.flags & UNINTERESTING) {
+				struct blob *child = lookup_blob(r, entry.oid);
+				if (child)
+					child->object.flags |= UNINTERESTING;
+			}
+			break;
+		default:
+			/* Subproject commit - not in this repository */
+			break;
+		}
+	}
+
+	free_tree_buffer(tree);
+}
+
+void mark_trees_uninteresting_sparse(struct repository *r,
+				     struct oidset *set)
+{
+	int i;
+	unsigned has_interesting = 0, has_uninteresting = 0;
+	struct paths_and_oids po;
+	struct object_id *oid;
+	struct oidset_iter iter;
+
+	oidset_iter_init(set, &iter);
+	while ((!has_interesting || !has_uninteresting) &&
+	       (oid = oidset_iter_next(&iter))) {
+		struct tree *tree = lookup_tree(r, oid);
+
+		if (!tree)
+			continue;
+
+		if (tree->object.flags & UNINTERESTING)
+			has_uninteresting = 1;
+		else
+			has_interesting = 1;
+	}
+
+	/* Do not walk unless we have both types of trees. */
+	if (!has_uninteresting || !has_interesting)
+		return;
+
+	paths_and_oids_init(&po);
+
+	oidset_iter_init(set, &iter);
+	while ((oid = oidset_iter_next(&iter))) {
+		struct tree *tree = lookup_tree(r, oid);
+		add_children_by_path(r, tree, &po);
+	}
+
+	for (i = 0; i < po.list.nr; i++)
+		mark_trees_uninteresting_sparse(
+			r, (struct oidset *)po.list.items[i].util);
+
+	paths_and_oids_clear(&po);
+}
+
 struct commit_stack {
 	struct commit **items;
 	size_t nr, alloc;
