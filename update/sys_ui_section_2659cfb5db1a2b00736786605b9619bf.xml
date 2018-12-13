@@ -140,6 +140,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>10</position>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 07:08:12</sys_created_on>
+            <sys_id>ac51a7d2db5a6b00736786605b961954</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_meter_data_import_web_service" sys_domain="global" view="Default view">2659cfb5db1a2b00736786605b9619bf</sys_ui_section>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 07:08:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
@@ -154,9 +168,9 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_mz_spayg_meter_data_import_web_service</sys_name>
             <sys_overrides/>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_section_2659cfb5db1a2b00736786605b9619bf</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
             <sys_updated_on>2018-12-11 16:06:31</sys_updated_on>

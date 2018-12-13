@@ -2,33 +2,108 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_mz_spayg_tariff" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cost</element>
-            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">15c7b810dbd66700eb64f9e139961995</list_id>
+            <element>base_tariff.psc</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 13:39:34</sys_created_on>
-            <sys_id>ddc7b810dbd66700eb64f9e139961995</sys_id>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>5b03e0a2db5aab00736786605b9619a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 13:39:34</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>tariff</element>
-            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">15c7b810dbd66700eb64f9e139961995</list_id>
+            <element>base_tariff</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 13:39:34</sys_created_on>
-            <sys_id>55c7b810dbd66700eb64f9e139961996</sys_id>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>db03e0a2db5aab00736786605b9619a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 13:39:34</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>tariff</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>5f03e0a2db5aab00736786605b9619a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>cost</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>df03e0a2db5aab00736786605b9619a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>gross_cost</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>5303e0a2db5aab00736786605b9619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>base_tariff.valid_from</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>d303e0a2db5aab00736786605b9619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>base_tariff.valid_to</element>
+            <list_id display_value="x_snc_mz_spayg_tariff" element="NULL" name="x_snc_mz_spayg_tariff" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9303e0a2db5aab00736786605b9619a9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
+            <sys_id>5703e0a2db5aab00736786605b9619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -42,18 +117,18 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 13:39:34</sys_created_on>
+            <sys_created_on>2018-12-13 11:55:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>15c7b810dbd66700eb64f9e139961995</sys_id>
+            <sys_id>9303e0a2db5aab00736786605b9619a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_mz_spayg_tariff</sys_name>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_mz_spayg_tariff_null</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 13:39:34</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:55:23</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

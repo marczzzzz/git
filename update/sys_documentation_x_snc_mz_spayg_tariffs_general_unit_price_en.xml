@@ -14,9 +14,9 @@
             <sys_id>cf07370adb1a6b00eb64f9e139961933</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Unit price</sys_name>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_documentation_x_snc_mz_spayg_tariffs_general_unit_price_en</sys_update_name>
             <sys_updated_by>christian.tuebing</sys_updated_by>
             <sys_updated_on>2018-12-12 14:04:38</sys_updated_on>

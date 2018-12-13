@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_snc_mz_spayg_sap_customer_data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">942c74d0dbd66700eb64f9e139961953</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
             <sys_updated_on>2018-12-06 13:58:37</sys_updated_on>
         </sys_ui_form_section>
@@ -40,9 +40,9 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_mz_spayg_sap_customer_data</sys_name>
             <sys_overrides/>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_form_sections_942c74d0dbd66700eb64f9e139961953</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
             <sys_updated_on>2018-12-06 13:58:36</sys_updated_on>

@@ -1,105 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="f37bccdcdb166700eb64f9e1399619c9" sys_domain="global" table="x_snc_mz_spayg_sap_customer_data" version="3" view="">
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
-            <position>0</position>
-            <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>0f2427cadbd66b00eb64f9e1399619d3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
-            <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
-            <sys_user/>
-            <type>.begin_split</type>
-        </sys_ui_element>
+    <sys_ui_section caption="Base Customer Data" section_id="f37bccdcdb166700eb64f9e1399619c9" sys_domain="global" table="x_snc_mz_spayg_sap_customer_data" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
-            <position>1</position>
+            <position>0</position>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>8f2427cadbd66b00eb64f9e1399619d3</sys_id>
+            <sys_created_on>2018-12-13 11:59:27</sys_created_on>
+            <sys_id>36f320e2db5aab00736786605b961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>bp_id</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>032427cadbd66b00eb64f9e1399619d4</sys_id>
+            <sys_created_on>2018-12-13 11:59:27</sys_created_on>
+            <sys_id>faf320e2db5aab00736786605b961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>832427cadbd66b00eb64f9e1399619d4</sys_id>
+            <sys_created_on>2018-12-13 11:59:27</sys_created_on>
+            <sys_id>7ef320e2db5aab00736786605b961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>given_name</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>072427cadbd66b00eb64f9e1399619d4</sys_id>
+            <sys_created_on>2018-12-13 11:59:27</sys_created_on>
+            <sys_id>fef320e2db5aab00736786605b961944</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>zaehlpunkt</element>
-            <position>5</position>
+            <position>4</position>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>872427cadbd66b00eb64f9e1399619d4</sys_id>
+            <sys_created_on>2018-12-13 11:59:27</sys_created_on>
+            <sys_id>72f320e2db5aab00736786605b961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
+            <sys_ui_section caption="Base Customer Data" display_value="Base Customer Data" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>6</position>
-            <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-12 12:42:10</sys_created_on>
-            <sys_id>0b2427cadbd66b00eb64f9e1399619d4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_mz_spayg_sap_customer_data" sys_domain="global" view="Default view">f37bccdcdb166700eb64f9e1399619c9</sys_ui_section>
-            <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-12 12:42:10</sys_updated_on>
-            <sys_user/>
-            <type>.end_split</type>
-        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
-            <caption/>
+            <caption>Base Customer Data</caption>
             <header>false</header>
             <name>x_snc_mz_spayg_sap_customer_data</name>
             <roles/>
@@ -109,15 +81,15 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>f37bccdcdb166700eb64f9e1399619c9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_snc_mz_spayg_sap_customer_data</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Base Customer Data</sys_name>
             <sys_overrides/>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_section_f37bccdcdb166700eb64f9e1399619c9</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 10:26:08</sys_updated_on>
+            <sys_updated_on>2018-12-13 11:59:27</sys_updated_on>
             <sys_user/>
             <title>true</title>
             <view display_value="Default view" name="NULL">Default view</view>

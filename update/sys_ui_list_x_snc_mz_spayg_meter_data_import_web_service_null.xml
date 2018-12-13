@@ -3,77 +3,122 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>evu</element>
-            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ec1e3b08db166700eb64f9e139961942</list_id>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
-            <sys_id>a41e3b08db166700eb64f9e139961943</sys_id>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>f41254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>timestamp</element>
-            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ec1e3b08db166700eb64f9e139961942</list_id>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
-            <sys_id>281e3b08db166700eb64f9e139961943</sys_id>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>781254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>unit</element>
-            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ec1e3b08db166700eb64f9e139961942</list_id>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
-            <sys_id>a81e3b08db166700eb64f9e139961943</sys_id>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>f81254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>value</element>
-            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ec1e3b08db166700eb64f9e139961942</list_id>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
-            <sys_id>2c1e3b08db166700eb64f9e139961943</sys_id>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>7c1254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>zaehlpunktnummer</element>
-            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">ec1e3b08db166700eb64f9e139961942</list_id>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
-            <sys_id>ac1e3b08db166700eb64f9e139961943</sys_id>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>fc1254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>cost</element>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>701254aadb5e6b00736786605b9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>tariff</element>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>f01254aadb5e6b00736786605b9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_snc_mz_spayg_meter_data_import_web_service" element="NULL" name="x_snc_mz_spayg_meter_data_import_web_service" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">301254aadb5e6b00736786605b9619ae</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>marc.zeiler</sys_created_by>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
+            <sys_id>741254aadb5e6b00736786605b9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>marc.zeiler</sys_updated_by>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -87,18 +132,18 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-06 09:27:29</sys_created_on>
+            <sys_created_on>2018-12-13 10:41:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ec1e3b08db166700eb64f9e139961942</sys_id>
+            <sys_id>301254aadb5e6b00736786605b9619ae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_mz_spayg_meter_data_import_web_service</sys_name>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_mz_spayg_meter_data_import_web_service_null</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-06 09:27:29</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:41:12</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

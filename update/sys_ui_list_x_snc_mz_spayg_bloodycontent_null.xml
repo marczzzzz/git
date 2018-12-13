@@ -3,92 +3,92 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>evu</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>1c1ca004dbda2700736786605b9619fb</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>fee11c2adb5e6b00736786605b96192d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>zahlpunkt</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>d01ca004dbda2700736786605b9619fc</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>b6e11c2adb5e6b00736786605b96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>timestamp</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>541ca004dbda2700736786605b9619fc</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>3ae11c2adb5e6b00736786605b96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>value</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>d41ca004dbda2700736786605b9619fc</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>bae11c2adb5e6b00736786605b96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>unit</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>581ca004dbda2700736786605b9619fc</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>3ee11c2adb5e6b00736786605b96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>status</element>
-            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">dc1ca004dbda2700736786605b9619fa</list_id>
+            <element>state</element>
+            <list_id display_value="x_snc_mz_spayg_bloodycontent" element="NULL" name="x_snc_mz_spayg_bloodycontent" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b2e11c2adb5e6b00736786605b96192d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
-            <sys_id>d81ca004dbda2700736786605b9619fc</sys_id>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
+            <sys_id>bee11c2adb5e6b00736786605b96192e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -102,18 +102,18 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>marc.zeiler</sys_created_by>
-            <sys_created_on>2018-12-05 18:09:57</sys_created_on>
+            <sys_created_on>2018-12-13 10:40:32</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>dc1ca004dbda2700736786605b9619fa</sys_id>
+            <sys_id>b2e11c2adb5e6b00736786605b96192d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_mz_spayg_bloodycontent</sys_name>
-            <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+            <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
             <sys_policy/>
-            <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+            <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_mz_spayg_bloodycontent_null</sys_update_name>
             <sys_updated_by>marc.zeiler</sys_updated_by>
-            <sys_updated_on>2018-12-05 18:09:57</sys_updated_on>
+            <sys_updated_on>2018-12-13 10:40:32</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

@@ -14,9 +14,9 @@
         <sys_id>1d7d4850db566700eb64f9e139961982</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_mz_spayg_sap_payment_data</sys_name>
-        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
         <sys_policy/>
-        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
         <sys_update_name>sys_security_acl_1d7d4850db566700eb64f9e139961982</sys_update_name>
         <sys_updated_by>marc.zeiler</sys_updated_by>
         <sys_updated_on>2018-12-06 10:34:42</sys_updated_on>

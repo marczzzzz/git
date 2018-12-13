@@ -50,9 +50,9 @@
         <sys_mod_count>33</sys_mod_count>
         <sys_name>CalcGrossCostTariffs</sys_name>
         <sys_overrides/>
-        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
         <sys_policy/>
-        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
         <sys_update_name>sys_script_662fee4adb566b00eb64f9e1399619ac</sys_update_name>
         <sys_updated_by>marc.zeiler</sys_updated_by>
         <sys_updated_on>2018-12-12 12:17:51</sys_updated_on>

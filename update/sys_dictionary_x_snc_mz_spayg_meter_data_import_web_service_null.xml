@@ -56,9 +56,9 @@
         <sys_id>efe6fbc0db166700eb64f9e1399619e1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_mz_spayg_meter_data_import_web_service</sys_name>
-        <sys_package display_value="mz Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
+        <sys_package display_value="Smart Pay As You Go" source="x_snc_mz_spayg">779bb73bdbca2700eb64f9e13996196e</sys_package>
         <sys_policy/>
-        <sys_scope display_value="mz Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
+        <sys_scope display_value="Smart Pay As You Go">779bb73bdbca2700eb64f9e13996196e</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_mz_spayg_meter_data_import_web_service_null</sys_update_name>
         <sys_updated_by>marc.zeiler</sys_updated_by>
         <sys_updated_on>2018-12-06 08:56:16</sys_updated_on>

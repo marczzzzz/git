@@ -2,7 +2,10 @@
     <element label="Verarbeitete Verbrauchswerte (WS)" max_length="40" name="x_snc_mz_spayg_meter_data_import_web_service" type="collection">
         <element label="Cost" max_length="20" name="cost" type="currency"/>
         <element label="PSC" max_length="40" name="evu" type="string"/>
-        <element label="Tariff" max_length="32" name="tariff" reference="x_snc_mz_spayg_tariff" type="reference"/>
+        <element choice="3" choice_field="state" choice_table="x_snc_mz_spayg_booking" default="0" label="State" max_length="40" name="state" type="choice">
+            <choice/>
+        </element>
+        <element label="Tariff" max_length="32" name="tariff" type="string"/>
         <element label="Timestamp" max_length="40" name="timestamp" type="glide_date_time"/>
         <element label="Unit" max_length="40" name="unit" type="string"/>
         <element label="Consumption Value" max_length="40" name="value" type="integer"/>

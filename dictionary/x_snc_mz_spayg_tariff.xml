@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Tarif - Details" max_length="40" name="x_snc_mz_spayg_tariff" type="collection">
-        <element label="Base Tariff" max_length="32" name="base_tariff" reference="x_snc_mz_spayg_tariffs_general" reference_cascade_rule="restrict" type="reference"/>
+        <element label="Base Tariff" max_length="32" name="base_tariff" reference="x_snc_mz_spayg_tariffs_general" reference_cascade_rule="cascade" type="reference"/>
         <element label="Net Cost" max_length="20" name="cost" type="currency"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;var cost;&#13;&#10;&#9;&#13;&#10;&#9;cost = current.cost + (current.cost * current.vat);&#13;&#10;&#9;return 'CHF;' + cost;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Gross Cost" max_length="20" name="gross_cost" read_only="true" type="currency"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
